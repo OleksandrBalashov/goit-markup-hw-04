@@ -91,6 +91,34 @@ img {
   color: var(--accent-color);
 }
 
+.address-item .icon-letter::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 11px;
+  margin-right: 10px;
+  background-image: url('../images/svg/letter.svg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  vertical-align: middle;
+}
+
+.address-item .icon-tel::before {
+  content: '';
+  width: 10px;
+  height: 15px;
+  display: inline-block;
+  margin-right: 10px;
+  background-image: url('../images/svg/phone.svg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  vertical-align: middle;
+}
+
 /* .logo:hover,
 .logo:focus {
   color: var(--accent-color);
@@ -229,12 +257,36 @@ footer {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  text-align: center;
 }
 
 .socials-list .social-icon:hover,
 .socials-list .social-icon:focus {
-  color: var(--accent-color);
+  background-color: var(--accent-color);
+}
+
+.join-container .social-icon::before {
+  display: block;
+  content: '';
+  height: 40px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.icon-instagram::before {
+  background-image: url('../images/svg/instagram.svg');
+}
+
+.icon-twitter::before {
+  background-image: url('../images/svg/twitter.svg');
+}
+
+.icon-facebook::before {
+  background-image: url('../images/svg/facebook.svg');
+}
+
+.icon-linkedin::before {
+  background-image: url('../images/svg/linkedin.svg');
 }
 
 .auth-container .auth {
@@ -251,8 +303,8 @@ footer {
 .button {
   border: 0;
   border-radius: 4px;
-  min-width: 109px;
-  padding: 10px 62px 10px 29px;
+  /* min-width: 200px; */
+  padding: 10px 18px 10px 29px;
 
   color: var(--primary-white-color);
   background-color: var(--accent-color);
@@ -264,4 +316,15 @@ footer {
   letter-spacing: 0.06em;
   text-align: left;
   cursor: pointer;
+}
+
+.button::after {
+  content: '';
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  background-image: url('../images/svg/telegram.svg');
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  margin-left: 10px;
 }
