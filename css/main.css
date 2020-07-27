@@ -79,31 +79,18 @@
   display: flex;
 }
 
-.features-item::before {
-  content: '';
-  display: block;
+.icon-features {
+  position: relative;
   height: 120px;
-  margin-bottom: 30px;
-
-  background-repeat: no-repeat;
-  background-position: center;
   background-color: var(--button-bg-color);
+  margin-bottom: 30px;
 }
 
-.icon-first::before {
-  background-image: url('../images/svg/first-icon.svg');
-}
-
-.icon-second::before {
-  background-image: url('../images/svg/second-icon.svg');
-}
-
-.icon-third::before {
-  background-image: url('../images/svg/third-icon.svg');
-}
-
-.icon-four::before {
-  background-image: url('../images/svg/four-icon.svg');
+.icon-feature {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .features-list .features-item {
@@ -178,7 +165,6 @@
 
 /* Наша команда */
 
-/* временный фон */
 .section.team-bgc {
   background-color: #f5f4fa;
 }
@@ -222,6 +208,26 @@
   line-height: 1.19;
 }
 
+.team-icon .social-icon {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.team-icon .social-icon:hover,
+.team-icon .social-icon:focus {
+  --color1: var(--primary-white-color);
+  background-color: var(--accent-color);
+}
+
+.team-icon .icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .team-list .team-socials {
   display: flex;
 
@@ -229,17 +235,8 @@
   justify-content: space-between;
 }
 
-.team-socials .social-icon {
-  color: var(--primary-text-color);
-}
-
 .team-socials li:not(:last-child) {
   margin-right: 10px;
-}
-
-.team-list .team-socials a:hover,
-.team-list .team-socials a:focus {
-  color: var(--accent-color);
 }
 
 /* Постоянные клиенты */
@@ -249,14 +246,30 @@
 
 .clients-list .clients-item {
   flex-basis: calc((100% - 30px * 5) / 6);
+  position: relative;
 
-  /* временные свойства */
-  height: 90px;
-  outline: 1px solid tomato;
+  /* height: 90px; */
 }
 
 .clients-list .clients-item:not(:last-child) {
   margin-right: 30px;
 }
 
+.client-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.client-company.link {
+  height: 90px;
+  border: 1px solid var(--secondary-bg-color);
+}
+
+.client-company.link:hover,
+.client-company.link:focus {
+  border-color: var(--accent-color);
+  --color1: var(--accent-color);
+}
 /* Футер */

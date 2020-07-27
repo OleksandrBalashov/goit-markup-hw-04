@@ -63,7 +63,7 @@ img {
 }
 
 .container {
-  width: 1200px;
+  max-width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -91,38 +91,10 @@ img {
   color: var(--accent-color);
 }
 
-.address-item .icon-letter::before {
-  content: '';
-  display: inline-block;
-  width: 16px;
-  height: 11px;
+.icon-address {
   margin-right: 10px;
-  background-image: url('../images/svg/letter.svg');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-
   vertical-align: middle;
 }
-
-.address-item .icon-tel::before {
-  content: '';
-  width: 10px;
-  height: 15px;
-  display: inline-block;
-  margin-right: 10px;
-  background-image: url('../images/svg/phone.svg');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  vertical-align: middle;
-}
-
-/* .logo:hover,
-.logo:focus {
-  color: var(--accent-color);
-} */
 
 .site-nav {
   display: flex;
@@ -173,6 +145,8 @@ img {
 .site-address a:hover,
 .site-address a:focus {
   color: var(--accent-color);
+  --color1: var(--accent-color);
+  --color4: var(--accent-color);
 }
 
 /* футер */
@@ -249,44 +223,30 @@ footer {
   margin-right: 10px;
 }
 
-.socials-list .social-icon {
-  color: var(--primary-white-color);
+.social-item > .social-icon.link {
   background-color: var(--social-icon-color);
 
-  /* временные свойства */
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
+
+  /* временные функции */
+  position: relative;
+}
+
+.social-icon .icon-join {
+  --color1: var(--primary-white-color);
+
+  /*  временные функции */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .socials-list .social-icon:hover,
 .socials-list .social-icon:focus {
   background-color: var(--accent-color);
-}
-
-.join-container .social-icon::before {
-  display: block;
-  content: '';
-  height: 40px;
-
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.icon-instagram::before {
-  background-image: url('../images/svg/instagram.svg');
-}
-
-.icon-twitter::before {
-  background-image: url('../images/svg/twitter.svg');
-}
-
-.icon-facebook::before {
-  background-image: url('../images/svg/facebook.svg');
-}
-
-.icon-linkedin::before {
-  background-image: url('../images/svg/linkedin.svg');
 }
 
 .auth-container .auth {
@@ -301,10 +261,9 @@ footer {
 }
 
 .button {
-  border: 0;
+  border: none;
   border-radius: 4px;
-  /* min-width: 200px; */
-  padding: 10px 18px 10px 29px;
+  padding: 10px 22px 10px 29px;
 
   color: var(--primary-white-color);
   background-color: var(--accent-color);
@@ -318,13 +277,7 @@ footer {
   cursor: pointer;
 }
 
-.button::after {
-  content: '';
-  display: inline-block;
-  height: 30px;
-  width: 30px;
-  background-image: url('../images/svg/telegram.svg');
-  background-repeat: no-repeat;
+.icon-send {
   vertical-align: middle;
   margin-left: 10px;
 }
