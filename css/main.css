@@ -14,6 +14,11 @@
 }
 
 .overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   max-width: 1600px;
   height: 600px;
   margin-left: auto;
@@ -25,9 +30,6 @@
       rgba(47, 48, 58, 0.8)
     ),
     url('../images/overlay/overlay.jpg');
-
-  /* временное свойсво */
-  padding: 200px 0;
 }
 
 .hero-title {
@@ -80,17 +82,12 @@
 }
 
 .icon-features {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 120px;
   background-color: var(--button-bg-color);
   margin-bottom: 30px;
-}
-
-.icon-feature {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .features-list .features-item {
@@ -209,7 +206,9 @@
 }
 
 .team-icon .social-icon {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -221,17 +220,8 @@
   background-color: var(--accent-color);
 }
 
-.team-icon .icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 .team-list .team-socials {
   display: flex;
-
-  /* временное свойство до иконок */
   justify-content: space-between;
 }
 
@@ -246,23 +236,16 @@
 
 .clients-list .clients-item {
   flex-basis: calc((100% - 30px * 5) / 6);
-  position: relative;
-
-  /* height: 90px; */
 }
 
 .clients-list .clients-item:not(:last-child) {
   margin-right: 30px;
 }
 
-.client-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 .client-company.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 90px;
   border: 1px solid var(--secondary-bg-color);
 }
